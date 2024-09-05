@@ -2,15 +2,15 @@ from setuptools import setup, find_packages
 
 setup(
     name="postgresql-singleton",
-    version="0.1.0",
+    version="0.1.1",
     packages=find_packages(),
     install_requires=[
         "psycopg2",
     ],
     description="PostgreSQL Singleton connection pool manager",
-    author="song seung hwan",
+    author="Song Seung Hwan",
     author_email="shdth117@gmail.com",
-    url="https://github.com/yourusername/postgresql_client",
+    url="https://github.com/alkaline2018/postgresql-singleton",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

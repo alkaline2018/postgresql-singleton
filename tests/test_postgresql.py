@@ -27,3 +27,10 @@ class TestPostgresClient(unittest.TestCase):
         PostgresClient.initialize_pool(self.config)
         PostgresClient.close_all_connections()
         self.assertIsNone(PostgresClient._connection_pool)
+
+    def test_sql(self):
+        with PostgresClient.get_connection(self.config) as conn:
+            with conn.cursor() as cursor:
+                cursor.execute("SELECT 1;")
+                result = cursor.fetchone()
+                print(result)
